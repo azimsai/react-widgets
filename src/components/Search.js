@@ -26,7 +26,7 @@ const Search = () => {
   });
 
   useEffect(() => {
-    console.log('Initial render or term change');
+    //console.log('Initial render or term change');
     const search = async () => {
       const { data } = await axios.get('https://en.wikipedia.org/w/api.php', {
         params: {

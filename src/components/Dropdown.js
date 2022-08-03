@@ -5,8 +5,9 @@ const Dropdown = ({ options, selected, onSelectedChange, label }) => {
   const ref = useRef();
 
   useEffect(() => {
+    //console.log(ref.current);
     const onBodyClick = (event) => {
-      if (ref.current.contains(event.target)) return;
+      if (ref.current && ref.current.contains(event.target)) return;
       setOpen(false);
     };
     document.body.addEventListener('click', onBodyClick, { capture: true });
